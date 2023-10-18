@@ -11,7 +11,7 @@ const Navbar = () => {
     </>
   
     return (
-        <div className='bg-black bg-opacity-90 text-white'>
+        <div className='bg-black bg-opacity-40 text-white absolute top-0 left-0 w-full'>
             <div className=' max-w-6xl mx-auto flex justify-between items-center'>
                 {/* logo */}
                 <div>
@@ -24,7 +24,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {/* user || login */}
-                <div className=' mr-2 text-gray-300' >
+                <div className=' mr-2 ' >
                     <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Login</button></Link>
                 </div>
             </div>
