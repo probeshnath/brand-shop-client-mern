@@ -5,6 +5,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/" className={({ isActive, isPending }) => isActive ? "border-b-2 font-bold text-white  border-orange-600"  : ""} > Home </NavLink>  </li>
         <li><NavLink to="/about" className={({ isActive, isPending }) => isActive ? "border-b-2 font-bold text-white border-orange-600"  : ""} > About </NavLink>  </li>
+        <li><NavLink to="/products" className={({ isActive, isPending }) => isActive ? "border-b-2 font-bold text-white border-orange-600"  : ""} > Products </NavLink>  </li>
         <li><NavLink to="/cart" className={({ isActive, isPending }) => isActive ? "border-b-2 font-bold text-white border-orange-600"  : ""} > My cart </NavLink>  </li>
         <li><NavLink to="/addproduct" className={({ isActive }) => isActive ? "border-b-2 font-bold text-white border-orange-600"  : ""} > Add Product </NavLink>  </li>
 
