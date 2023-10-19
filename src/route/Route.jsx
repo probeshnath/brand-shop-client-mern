@@ -16,7 +16,8 @@ import Register from "../pages/Register";
       children: [
         {
             path:"/",
-            element: <Home />
+            element: <Home />,
+            loader: ()=> fetch("/brand.json")
         },
         {
             path:"/about",

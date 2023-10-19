@@ -1,0 +1,38 @@
+[
+    {
+        "brand_name":"Toyota",
+        "description":"Toyota is a global automotive giant renowned for its commitment to quality, innovation, and sustainability. Headquartered in Toyota City, Japan, the company has grown to become one of the world's largest and most influential automobile manufacturers.",
+        "img":["https://i.ibb.co/CnkPkZB/default-large.jpg","https://i.ibb.co/MSRxcgj/toyota-irresistible-intelligent-the-all-new-camry-car-ad-bombay-times-22-01-2019.png","https://i.ibb.co/0GhJvnK/Toyota-most-watched-8-17-22.png"],
+        "bg-img":"https://i.ibb.co/42YG0VD/emblem-ogp-001-removebg-preview.png"
+    },
+    {
+        "brand_name":"Ford",
+        "description":"Ford is a renowned American multinational automaker with a storied history that has profoundly impacted the global automotive industry. Founded by Henry Ford in 1903, Ford is headquartered in Dearborn, Michigan.",
+        "img":["https://i.ibb.co/GdYHWLz/default-large.jpg","https://i.ibb.co/HPhh9Wv/Oct-2023-F-150-XLT-Ford-Monthly-1800x675.jpg","https://i.ibb.co/MCfbwF2/LIFL-0023-WB1-F150-LIGHTNING.jpg"],
+        "bg-img":"https://i.ibb.co/qMYQbJL/Ford-Logo-removebg-preview.png"
+    },
+    {
+        "brand_name":"BMW",
+        "description":"Bayerische Motoren Werke AG, commonly known as BMW, is a renowned German automotive manufacturer with a rich history dating back to 1916. BMW is widely recognized for producing high-quality, luxurious, and performance-oriented vehicles. The company's headquarters is located in Munich, Germany.",
+        "img":["https://i.ibb.co/4N4PVMg/G30-5-Series-Business-Athlete-823x462.jpg","https://i.ibb.co/8gqY7q4/images-q-tbn-ANd9-Gc-T5-Dm-Sr-Xl-Rv-PZ2-Su-Wg-Y3-CBjs-RRYWu-S98-Moakr-Nv-T3i5-NDJ1ze-To-C1p-HRi-lmlq.jpg","https://i.ibb.co/bzdKJd7/Untitled-1-10.jpg"],
+        "bg-img":"https://i.ibb.co/nfMGvmR/bmw-2-logo-png-transparent-removebg-preview.png"
+    },
+    {
+        "brand_name":"Mercedes-Benz",
+        "description":"Mercedes-Benz is a renowned luxury automobile manufacturer with a storied history dating back to the late 19th century. Founded in 1926, it is a division of the German company Daimler AG and has consistently stood as a symbol of automotive excellence. The brand is synonymous with precision engineering, innovation, and timeless elegance.",
+        "img":["https://i.ibb.co/5Rkj4sK/car-rental-promotion-horizontal-banner-facebook-cover-template-812236-1066.jpg","https://i.ibb.co/87fyNYB/luxury-car-rental-promotional-facebook-cover-web-banner-template-182992-148.jpg","https://i.ibb.co/S5Ht9c7/car-rental-promotion-horizontal-banner-facebook-cover-template-812236-1071.jpg"],
+        "bg-img":"https://i.ibb.co/gzbptCk/images-removebg-preview.png"
+    },
+    {
+        "brand_name":"Tesla",
+        "description":"Tesla, Inc. is an American electric vehicle (EV) and clean energy company founded in 2003 by Elon Musk, JB Straubel, Martin Eberhard, Marc Tarpenning, and Ian Wright. Over the years, Tesla has become synonymous with innovation and disruption in the automotive industry.",
+        "img":["https://i.ibb.co/GJQZcV7/K5-MRDOKR4-NKDPOEE7-H4-NESHRVM.jpg","https://i.ibb.co/Cw91XyC/Getty-Images-490597708-1-compressor-1024x683.jpg","https://i.ibb.co/5hwZkJf/tesla-website.jpg"],
+        "bg-img":"https://i.ibb.co/rtBj5q8/TESLA-LOGO-removebg-preview.png"
+    },
+    {
+        "brand_name":"Honda",
+        "description":"Honda is a renowned Japanese automotive manufacturer known for its exceptional vehicles and a rich history that dates back to 1948. Founded by Soichiro Honda, the company has consistently delivered innovative and reliable products, earning a global reputation for quality and performance.",
+        "img":["https://i.ibb.co/q0c6cc6/images-q-tbn-ANd9-Gc-Rw-O-LWB-CVi-Np-VDIZItwtrhjcym-NIo-Mb-Kt-N0-X4xe-Yov-A0p-Hy8snwi-JYYr-Wg-Yn-OM7.jpg","https://i.ibb.co/5FZC6JH/ranjit.jpg","https://i.ibb.co/cDz8L0p/Ks1.jpg"],
+        "bg-img":"https://i.ibb.co/gv47MrL/png-clipart-honda-logo-honda-cr-v-honda-civic-honda-cdr-angle-removebg-preview.png"
+    }
+]
