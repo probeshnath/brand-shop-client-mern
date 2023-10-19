@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom'
 
 const ProductDetails = () => {
     const product = useLoaderData();
-    console.log("product details",product)
+    // console.log("product details",product)
   return (
     <div className='max-w-6xl mx-auto pt-[100px]'>
          <figure><img src={product.productImg} alt="Shoes" /></figure>
