@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import {BsGithub, BsGoogle} from 'react-icons/bs'
-import { AuthContext } from './Provider/Provider'
+import { AuthContext } from '../Provider/Provider'
 
 
 const SocialLogin = () => {

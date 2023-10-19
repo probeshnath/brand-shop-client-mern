@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import SocialLogin from '../components/SocialLogin'
 import { Link } from 'react-router-dom'
-import { AuthContext } from '../components/Provider/Provider'
+import { AuthContext } from '../Provider/Provider'
 
 const Login = () => {
   const {login} = useContext(AuthContext);
