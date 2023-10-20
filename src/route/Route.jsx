@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import MainRoute from "./MainRoute";
 import Home from "../pages/Home";
-import About from "../pages/About";
 import Cart from "../pages/Cart";
 import AddProduct from "../pages/AddProduct";
 import Login from "../pages/Login";
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: () => fetch("/brand.json")
-      },
-      {
-        path: "/about",
-        element: <About />
       },
       {
         path: "/products",
