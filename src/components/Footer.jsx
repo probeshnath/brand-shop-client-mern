@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='bg-black text-gray-300'>
       <footer className='max-w-6xl mx-auto'>
-        <div className="footer justify-between items-center p-10 ">
+        <div className="footer grid grid-cols-2 md:grid-cols-4  items-center p-10 ">
           <aside className=''>
             <img className='w-30 h-20' src="/logo.png" alt="logo" />
             <p><span className='text-2xl text-red-700 py-2'>Star Automotive Ltd</span> .<br />Star Automotive Shop is a trusted and reliable destination <br /> for all your automotive needs. Our facility is equipped with  <br /> state-of-the-art tools  and staffed by skilled technicians</p>

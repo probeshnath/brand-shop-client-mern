@@ -10,15 +10,15 @@ const Brands = () => {
 
                 <div className='text-center pb-8'>
                     <h2 className='text-4xl text-red-700'>Our Brands</h2>
-                    <p className='text-sm aftertag uppercase pt-2 relative'>The autos we deals in</p>
+                    <p className='text-sm lg:aftertag uppercase pt-2 relative'>The autos we deals in</p>
                 </div>
 
-                <div className='flex justify-between items-center '>
+                <div className=' grid grid-cols-2 px-2 md:grid-cols-3  text-center  items-center '>
                     {
                         brands?.map((brand) => (
                             <Link to={`/${brand.brand_name}`}>
-                                <div className='text-center'>
-                                    <img className='w-20 h-20' src={brand['bg-img']} alt="" />
+                                <div className='text-center border-2  border-white p-2'>
+                                    <img className='w-20 h-20 mx-auto' src={brand['bg-img']} alt="" />
                                     <h2>{brand.brand_name}</h2>
                                 </div>
                             </Link>

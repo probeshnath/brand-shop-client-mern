@@ -27,3 +27,9 @@ top: 60%;
     left:40%;
     top: 60%;
     }
+
+.myHover > li:hover {
+ background: orange;
+ color: white;
+ padding: 5px 0px;
+}
