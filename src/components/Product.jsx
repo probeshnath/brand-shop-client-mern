@@ -1,26 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Product = ({ product }) => {
+const Product = ({ product,handleDelete }) => {
 
-    console.log(product)
+    // console.log(product)
 
-    const handleDelete = (id) => {
-        console.log("id for delete", id)
+    // const handleDelete = (id) => {
+    //     console.log("id for delete", id)
 
-        fetch(`http://localhost:5000/products/${id}`, {
-            method: "DELETE"
-        })
-            .then((res => res.json()))
-            .then((data) => {
-                console.log(data)
-            })
-    }
+    //     fetch(`http://localhost:5000/products/${id}`, {
+    //         method: "DELETE"
+    //     })
+    //         .then((res => res.json()))
+    //         .then((data) => {
+    //             console.log(data)
+    //             if(data.deletedCount > 0){
+    //                 const updatedCart = carts.filter((cart) => cart.product._id !== productId);
+    //                 setCart(updatedCart);
+    //               }
+    //         })
+    // }
 
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-                <figure><img src={product.productImg} alt={product.productName} /></figure>
+            <div className="card bg-base-100 p-3 shadow-xl">
+                <figure><img src={product.productImg} alt={product.productName} className='h-[200px] w-full' /></figure>
                 <div className="card-body">
                     <h2 className="text-2xl text-orange-500 font-bold text-center">{product.productName}</h2>
                     {/* <p>{product.description}</p> */}

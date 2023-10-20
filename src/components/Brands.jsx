@@ -16,7 +16,7 @@ const Brands = () => {
                 <div className=' grid grid-cols-2 px-2 md:grid-cols-3  text-center  items-center '>
                     {
                         brands?.map((brand) => (
-                            <Link to={`/products/${brand.brand_name}`}>
+                            <Link to={`/product/${brand.brand_name}`}>
                                 <div className='text-center border-2  border-white p-2'>
                                     <img className='w-20 h-20 mx-auto' src={brand['bg-img']} alt="" />
                                     <h2>{brand.brand_name}</h2>
