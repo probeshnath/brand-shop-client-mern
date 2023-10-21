@@ -20,6 +20,7 @@ const Product = ({ product,handleDelete }) => {
     //               }
     //         })
     // }
+    // <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
     return (
         <div>
@@ -32,7 +33,11 @@ const Product = ({ product,handleDelete }) => {
                         <p className='font-bold'>Price: <span className='text-red-700'>${product.price}</span></p>
                         <p className='font-bold'>Brand: <span className='text-red-700'>{product.brandName}</span> </p>
                         <p className='font-bold'>Category: <span className='text-red-700'>{product.category}</span> </p>
-                        <p className='font-bold'>Rating: <span className='text-red-700'>{product.rating}</span> </p>
+                        <p className='font-bold'>Rating: <span className='text-red-700'>
+                            {product.rating}
+                            {/* {product.rating.split} */}
+                            
+                            </span> </p>
                     </div>
                     <div className='flex justify-around'>
                         <Link to={`/update/${product._id}`} ><button className='btn'>Update</button></Link>
