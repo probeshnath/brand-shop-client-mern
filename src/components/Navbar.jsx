@@ -22,28 +22,28 @@ const Navbar = () => {
             .then((data) => console.log(data))
     }
 
-    const handleToggle = (e) =>{
-        if(e.target.checked){
+    const handleToggle = (e) => {
+        if (e.target.checked) {
             setTheme("dark")
-        }else{
+        } else {
             setTheme("light")
         }
     }
 
     // theeme
-    const [theme,setTheme]= useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light" )
-    useEffect(()=>{
-        localStorage.setItem("theme",theme)
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+    useEffect(() => {
+        localStorage.setItem("theme", theme)
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme)
-    },[theme])
+    }, [theme])
 
     return (
-        <div className='bg-black bg-opacity-40 text-white absolute top-0 left-0 w-full'>
+        <div className='bg-black bg-opacity-40 text-white pr-3 absolute top-0 left-0 w-full'>
             <div className=' max-w-6xl mx-auto flex justify-between items-center'>
                 {/* logo */}
                 <div>
-                    <img src="/logo.png" alt="Logo" className='w-30 h-20' />
+                  <Link to="/">  <img src="/logo.png" alt="Logo" className='w-30 h-20' /> </Link>
 
                 </div>
                 {/* menu list */}
@@ -66,8 +66,7 @@ const Navbar = () => {
                         <svg className="swap-off fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
 
                     </label>
-                    {
-                        user ?
+                   
                             <>
                                 {/* <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Logout</button></Link> */}
                                 <div className='relative'>
@@ -76,24 +75,32 @@ const Navbar = () => {
                                         open &&
                                         <div className='bg-black w-[250px] z-50 absolute top-10 p-5 rounded-sm right-5'>
                                             <ul className='text-center myHover px-3 py-5 flex flex-col gap-3'>
+                                            {
+                                                  user &&
+                                                  <>
                                                 <img className='w-[50px] h-[50px] rounded-full mx-auto' src={user?.photoURL || "https://i.ibb.co/4pHn0YL/user-244.png"} alt="" />
                                                 <h2 className='capitalize text-2xl font-bold -mb-3'>{user?.displayName}</h2>
-                                                <p className='text-sm text-gray-400'>{user?.email}</p>
+                                                <p className='text-sm text-gray-400'>{user?.email}</p> 
+                                                
                                                 <hr />
+                                                </>
+                                            }
                                                 {links}
-                                                <li><button onClick={handleLogout} className='py-1 px-4 rounded-2xl'>Logout</button></li>
+                                                
+                                                {user ? <li><button onClick={handleLogout} className='py-1 px-4 rounded-2xl'>Logout</button></li> : <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Login</button></Link> }
                                             </ul>
                                         </div>
                                     }
 
                                 </div>
                             </>
-                            : <>
+                            {/* : */}
+                             <>
 
-                                <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Login</button></Link>
+                                {/* <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Login</button></Link> */}
 
                             </>
-                    }
+                    {/* } */}
 
                 </div>
             </div>

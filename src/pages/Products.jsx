@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Product from '../components/Product'
+import { toast } from 'react-toastify'
 
 const Products = () => {
     const loadProducts = useLoaderData()
@@ -17,6 +18,7 @@ const Products = () => {
             .then((data) => {
                 console.log(data)
                 if(data.deletedCount > 0){
+                    toast.success("Delete this product from Cart")
                     const updatedCart = products.filter((p) => p._id !== id);
                     setProducts(updatedCart);
                   }
@@ -24,7 +26,7 @@ const Products = () => {
     }
     return (
         <div className='max-w-6xl mx-auto pt-[100px]'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     products?.map((product) => (
                         <Product handleDelete={handleDelete} key={product._id} product={product} />

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { AuthContext } from '../Provider/Provider';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const [carts, setCart] = useState(null)
@@ -26,6 +27,7 @@ const Cart = () => {
             .then((data) => {
                 console.log(data)
                 if(data.deletedCount > 0){
+                  toast.success("Delete this product from Cart")
                   const updatedCart = carts.filter((cart) => cart.product._id !== productId);
                   setCart(updatedCart);
                 }
@@ -40,7 +42,7 @@ const Cart = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-5 px-3'>
         {
           carts?.map((cart) => (
-            <div className="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100 py-3 shadow-xl">
               <figure><img className='w-[300px] h-[100px]' src={cart.product.productImg} alt={cart.productName} /></figure>
               <div className="card-body">
                 <h2 className="text-2xl text-orange-500 font-bold text-center">{cart.product.productName}</h2>

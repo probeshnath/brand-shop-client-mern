@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+import {toast} from 'react-toastify'
 
 const AddProduct = () => {
+  const navigate = useNavigate()
 
   const handleAddProduct = (e) =>{
     e.preventDefault();
@@ -34,6 +37,12 @@ const AddProduct = () => {
     .then(res => res.json())
     .then((data => {
       console.log(data)
+      if(data.insertedId){
+
+        toast.success("Product Added Successfully")
+        form.reset()
+        navigate("/products")
+      }
     }))
 
   }

@@ -1,9 +1,11 @@
 import React from 'react'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import {  toast } from 'react-toastify';
 
 const UpdateProduct = () => {
     const product = useLoaderData();
     console.log("update",product)
+    const navigate = useNavigate();
 
     const handleUpdateProduct = (e) =>{
         e.preventDefault();
@@ -37,6 +39,11 @@ const UpdateProduct = () => {
         .then(res => res.json())
         .then((data => {
           console.log(data)
+          if(data.modifiedCount> 0){
+
+            toast.success("Product Updated Successfully!");
+            navigate("/products")
+          }
         }))
     
       }

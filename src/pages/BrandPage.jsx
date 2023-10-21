@@ -70,7 +70,7 @@ const BrandPage = () => {
       {/* description */}
 
       {/*  */}
-      {/* <div> */}
+      <div>
         <h1 className='text-5xl text-center text-red-800 py-5'>Brand:{selectbrand?.brand_name} </h1>
 
         <div className='grid grid-cols-1 gap-4 px-3 md:grid-cols-2 lg:grid-cols-3'>
@@ -80,8 +80,14 @@ const BrandPage = () => {
             ))
           }
         </div>
+          {
+            products?.length <= 0 &&   <div>
+              <img src="https://i.ibb.co/VmwcX2M/oops.png" alt="" />
+            <h2 className='text-3xl text-center w-full text-orange-600 font-bold'>No Products in this Brand</h2>
+          </div>
+          }
 
-      {/* </div> */}
+      </div>
 
 
     </div>

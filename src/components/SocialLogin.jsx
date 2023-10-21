@@ -1,27 +1,37 @@
 import React, { useContext } from 'react'
 import {BsGithub, BsGoogle} from 'react-icons/bs'
 import { AuthContext } from '../Provider/Provider'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 
 const SocialLogin = () => {
+  const navigate = useNavigate()
   const {googleLogin,githubLogin} = useContext(AuthContext);
   // console.log(name)
   const handleGoogle = () =>{
     googleLogin()
     .then((result) =>{
-      console.log(result.user)
+      // console.log(result.user)
+      navigate("/")
+      toast.success("Create user Successfully")
+
     })
     .catch((error)=>{
-      console.log(error)
+      // console.log(error)
+      toast.error("Can't create your")
     })
   }
   const handleGithub = () =>{
     githubLogin()
     .then((result) =>{
-      console.log(result.user)
+      // console.log(result.user)
+      navigate("/")
+      toast.success("Create user Successfully")
     })
     .catch((error)=>{
-      console.log(error)
+      // console.log(error)
+      toast.error("Can't create your")
     })
   }
   return (

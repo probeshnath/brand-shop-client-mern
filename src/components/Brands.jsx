@@ -5,7 +5,7 @@ const Brands = () => {
     const brands = useLoaderData();
     console.log(brands)
     return (
-        <div className='bg-gray-200 py-10'>
+        <div className=' py-10'>
             <div className='max-w-6xl mx-auto'>
 
                 <div className='text-center pb-8'>

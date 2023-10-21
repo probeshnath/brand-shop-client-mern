@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { Link, useLoaderData } from 'react-router-dom'
 import {AuthContext} from '../Provider/Provider'
+import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
     const product = useLoaderData();
-    // console.log("product details",product)
+    console.log("product details",product)
     const {user} =useContext(AuthContext)
 
     const addtoCart = (product) =>{
@@ -22,8 +23,14 @@ const ProductDetails = () => {
       .then(res => res.json())
       .then((data)=> {
         console.log(data)
+        if(data.insertedId){
+          toast("Product Added your Cart")
+        }
       })
     }
+
+    // const rating = product.rating.splite(" ")
+    // console.log(rating)
 
   return (
     <div className='max-w-6xl mx-auto pt-[100px]'>
@@ -35,7 +42,9 @@ const ProductDetails = () => {
                         <p className='font-bold'>Price: <span className='text-red-700'>${product.price}</span></p>
                         <p className='font-bold'>Brand: <span className='text-red-700'>{product.brandName}</span> </p>
                         <p className='font-bold'>Category: <span className='text-red-700'>{product.category}</span> </p>
-                        <p className='font-bold'>Rating: <span className='text-red-700'>{product.rating}</span> </p>
+                        <p className='font-bold'>Rating: <span className='text-red-700'>{
+                      product.rating
+                        }</span> </p>
                     </div>
                     <div className=' flex justify-center gap-5'>
                         <Link to={`/update/${product._id}`} ><button className='btn'>Update</button></Link>
