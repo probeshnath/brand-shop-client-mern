@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from '../Provider/Provider'
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext)
+    const { user,logout } = useContext(AuthContext)
     const [open, setOpen] = useState(false)
     // window.onclick(setOpen(!open))
     console.log(user)
@@ -15,6 +15,12 @@ const Navbar = () => {
         <li><NavLink to="/addproduct" className={({ isActive }) => isActive ? "border-b-2 font-bold text-white border-orange-600" : ""} > Add Product </NavLink>  </li>
 
     </>
+
+    const handleLogout = () =>{
+        logout()
+        .then((res)=> res.json())
+        .then((data)=> console.log(data))
+    }
 
     return (
         <div className='bg-black bg-opacity-40 text-white absolute top-0 left-0 w-full'>
@@ -46,7 +52,7 @@ const Navbar = () => {
                                                 <p className='text-sm text-gray-400'>{user?.email}</p>
                                                 <hr />
                                                 {links}
-                                                <li><button className='py-1 px-4 rounded-2xl'>Logout</button></li>
+                                                <li><button onClick={handleLogout} className='py-1 px-4 rounded-2xl'>Logout</button></li>
                                             </ul>
                                         </div>
                                     }
