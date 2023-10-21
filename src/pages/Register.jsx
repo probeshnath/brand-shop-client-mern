@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import SocialLogin from '../components/SocialLogin'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../Provider/Provider'
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const {register} = useContext(AuthContext)
+
+  const navigate = useNavigate()
 
   const handleRegister = (e) =>{
     e.preventDefault();
@@ -14,12 +17,25 @@ const Register = () => {
     const photo = form.photo.value;
     const password = form.password.value;
     console.log(email, password)
+
+
+      
+    if (password.length < 6) {
+      return toast.error("Enter minimun 6 characters password");
+    } else if (!/(?=.*[A-Z])/.test(password)) {
+      return toast.error("Minimun 1 characters will be Capital leter password");
+    } else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+      return toast.error("Minimun 1 characters will be Special Character password");
+    }
+
+
     register(email,password)
     .then((result)=>{
-      console.log(result.user)
+      toast.success("Create Your account Successfully!");
+      navigate("/")
     })
     .catch((error)=>{
-      console.log(error)
+      toast.error(error.message);
     })
   }
 

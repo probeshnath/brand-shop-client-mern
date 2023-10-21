@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import SocialLogin from '../components/SocialLogin'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../Provider/Provider'
+import {  toast } from 'react-toastify';
 
 const Login = () => {
   const {login} = useContext(AuthContext);
+  const navigate = useNavigate()
 
   const handleLogin = (e) =>{
     e.preventDefault();
@@ -13,11 +15,14 @@ const Login = () => {
     const password = form.password.value;
     console.log(email, password)
     login(email,password)
-    .then((result)=>{
-      console.log(result.user)
+    .then((result) =>{
+      toast.success("Login Successfully!");
+      navigate("/")
     })
     .catch((error)=>{
-      console.log(error)
+      toast.error(error.message);
+      // return setError(error)
+       console.log(error)
     })
   }
   return (

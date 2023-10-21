@@ -59,8 +59,11 @@ const Navbar = () => {
 
                                 </div>
                             </>
-                            :
+                            : <>
+                            
                             <Link to="/login"><button className='border-2 border-orange-600 py-1 px-4 rounded-2xl'>Login</button></Link>
+                            
+                            </>
                     }
 
                 </div>
