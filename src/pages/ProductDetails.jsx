@@ -13,7 +13,7 @@ const ProductDetails = () => {
         email: user.email,
         product
       }
-      fetch("http://localhost:5000/cart",{
+      fetch("https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/cart",{
         method:"POST",
         headers:{
           'content-type':"application/json"

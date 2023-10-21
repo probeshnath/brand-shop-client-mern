@@ -5,10 +5,10 @@
 
 ## Live Link of Automative Brand Shop
 
- - [Live Link](https://social-event-management-1a2d5.web.app/)
- - [Automative Brand Shop Client Code Link](https://social-event-management-1a2d5.web.app/)
- - [Automative Brand Shop Server Code Link](https://social-event-management-1a2d5.web.app/)
- - [Automative Brand Shop Server Live Link](https://social-event-management-1a2d5.web.app/)
+ - [Live Link](https://brand-shop-mern.web.app/)
+ - [Automative Brand Shop Client Code Link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-probeshnath)
+ - [Automative Brand Shop Server Code Link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-probeshnath)
+ - [Automative Brand Shop Server Live Link](https://brand-shop-server-p8cfm0zo8-probeshnath.vercel.app/)
  
 
 ## 5 Effective Feature of Automative Brand Shop

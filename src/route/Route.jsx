@@ -26,27 +26,27 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
-        loader: () => fetch("http://localhost:5000/products")
+        loader: () => fetch("https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/products")
       },
       {
         path: "/product/:brand",
         element: <BrandPage />,
-        loader: () => fetch("http://localhost:5000/products")
+        loader: () => fetch("https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/products")
       },
       {
         path: "/update/:id",
         element: <PrivateRoute><UpdateProduct /></PrivateRoute> ,
-        loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params})=> fetch(`https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/products/${params.id}`)
       },
       {
         path:"/products/:id",
         element: <PrivateRoute><ProductDetails /></PrivateRoute> ,
-        loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params})=> fetch(`https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/products/${params.id}`)
     },
       {
         path: "/cart",
         element: <PrivateRoute><Cart /></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/cart")
+        loader: () => fetch("https://brand-shop-server-2e0xnfvom-probeshnath.vercel.app/cart")
       },
       {
         path: "/addproduct",
